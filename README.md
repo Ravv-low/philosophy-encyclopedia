@@ -1,80 +1,50 @@
-# Philosofun
+# 🏛️ Philosofun
 
-Philosofun adalah ensiklopedia filsafat interaktif berbahasa Indonesia. Aplikasi ini mengajak pengguna menjelajahi sejarah gagasan melalui profil filsuf, analisis argumen, pengujian silogisme, dan katalog kesesatan berpikir.
+> Ensiklopedia filsafat interaktif berbahasa Indonesia untuk menjelajahi sejarah gagasan, profil tokoh, analisis argumen, hingga uji logika.
 
-## Fitur
+---
 
-- **Ensiklopedia filsafat** dengan profil tokoh, era, latar belakang, genealogi gagasan, cabang pemikiran, karya, dan kutipan.
-- **Filter era** untuk menyaring tokoh berdasarkan periode sejarah.
-- **Halaman detail filsuf** dengan tampilan bacaan yang lebih lengkap.
-- **Penguji kesesatan berpikir** yang mendeteksi beberapa pola fallacy berdasarkan kata kunci.
-- **Uji silogisme deduktif** untuk memeriksa hubungan dasar antar-term dalam premis dan kesimpulan.
-- **Katalog fallacy** yang dapat dicari berdasarkan nama, definisi, atau contoh.
-- **Mode terang dan gelap** yang disimpan di `localStorage` browser.
-- **Salin dan bagikan kutipan** melalui Clipboard API atau Web Share API jika tersedia.
-- **Form Sign In / Sign Up** sebagai simulasi antarmuka autentikasi.
+## 🚀 Live Demo
 
-## Teknologi
+Coba dan akses aplikasi secara langsung melalui GitHub Pages:
 
-- HTML5
-- CSS3
-- JavaScript ES Modules
-- Google Fonts: Cinzel dan Inter
-- Font Awesome 6
+👉 **[Buka Aplikasi Philosofun](https://ravv-low.github.io/philosophy-encyclopedia/)**
 
-Tidak ada framework, database, atau proses build yang diperlukan.
+---
 
-## Menjalankan Secara Lokal
+## ✨ Fitur Utama
 
-Karena aplikasi menggunakan JavaScript ES Modules, jalankan melalui web server lokal dan bukan dengan membuka `index.html` langsung menggunakan protokol `file://`.
+| Fitur | Deskripsi |
+| :--- | :--- |
+| **📚 Ensiklopedia Filsafat** | Profil mendalam tokoh filsafat, era, latar belakang, genealogi gagasan, cabang pemikiran, karya utama, dan kutipan. |
+| **⏳ Filter Era** | Menyaring tokoh berdasarkan periode sejarah (Kuno, Abad Pertengahan, Modern, Kontemporer, dll.). |
+| **📖 Detail Dossier** | Tampilan antarmuka bacaan yang rapi dan fokus untuk mengeksplorasi pemikiran tiap filsuf. |
+| **🔍 Penguji Kesesatan Berpikir** | Alat bantu otomatis untuk mendeteksi pola *logical fallacy* berbasis kata kunci. |
+| **⚖️ Uji Silogisme Deduktif** | Modul pengujian hubungan antar-term dalam premis dan kesimpulan. |
+| **📖 Katalog Fallacy** | Direktori kesesatan berpikir yang dapat dicari berdasarkan nama, definisi, atau contoh kasus. |
+| **🌓 Dark & Light Mode** | Beralih tema tampilan terang/gelap dengan preferensi yang tersimpan di `localStorage`. |
+| **🔗 Salin & Bagikan** | Fitur menyalin dan membagikan kutipan favorit via Clipboard API / Web Share API. |
+| **🔐 Simulasi Auth** | Antarmuka Form Sign In & Sign Up untuk alur pengguna. |
 
-### Menggunakan Python
+---
 
-Pastikan Python sudah terpasang, lalu jalankan perintah berikut dari folder proyek:
+## 🛠️ Teknologi
 
+Aplikasi ini dibangun menggunakan teknologi web murni tanpa *framework*, *database*, atau proses *build*:
+
+* **HTML5** – Struktur konten & kompartemen aplikasi
+* **CSS3** – Layout responsif, variabel tema, dan styling kustom
+* **JavaScript (ES Modules)** – Arsitektur modular client-side
+* **Google Fonts** – Tipografi (*Cinzel* & *Inter*)
+* **Font Awesome 6** – Ikon antarmuka
+
+---
+
+## 🏃 Menjalankan Secara Lokal
+
+Karena aplikasi ini menggunakan **JavaScript ES Modules**, proyek harus dijalankan melalui server lokal (bukan membuka `index.html` langsung via `file://`).
+
+### Opsi 1: Menggunakan Python
+Jalankan perintah berikut di dalam folder proyek melalui terminal:
 ```bash
 python -m http.server 8000
-```
-
-Buka [http://localhost:8000](http://localhost:8000) di browser.
-
-### Menggunakan Visual Studio Code
-
-1. Buka folder proyek di Visual Studio Code.
-2. Pasang ekstensi **Live Server**.
-3. Klik kanan file `index.html`.
-4. Pilih **Open with Live Server**.
-
-## Struktur Folder
-
-```text
-Philosofun/
-├── index.html              # Struktur halaman dan komponen antarmuka
-├── css/
-│   └── style.css           # Gaya, layout, tema, dan responsive design
-└── js/
-    ├── app.js              # Logika aplikasi dan interaksi pengguna
-    └── data/
-        ├── index.js        # Ekspor kumpulan data filsuf
-        ├── alfarabi.js
-        ├── aristotle.js
-        ├── kant.js
-        ├── foucault.js
-        ├── expanded.js
-        └── expanded2.js
-```
-
-## Catatan Implementasi
-
-- Data filsuf dan fallacy disimpan secara statis di dalam berkas JavaScript.
-- Fitur autentikasi saat ini hanya simulasi antarmuka; tidak ada akun, validasi server, atau penyimpanan password.
-- Analisis fallacy dan silogisme merupakan pemeriksaan awal berbasis heuristik, bukan pengganti analisis logika atau verifikasi akademik.
-- Font dan ikon dimuat dari CDN, sehingga koneksi internet diperlukan agar tampilan eksternal tersebut tampil sempurna.
-
-## Pengembangan
-
-Untuk menambahkan filsuf, tambahkan objek dengan struktur yang sesuai pada salah satu berkas di `js/data/`, kemudian ekspor dan gabungkan datanya melalui `js/data/index.js`. Perubahan pada perilaku antarmuka dapat dilakukan di `js/app.js`, sedangkan tampilan diatur melalui `css/style.css`.
-
-## Lisensi
-
-Belum ada lisensi open-source yang ditentukan untuk proyek ini.
